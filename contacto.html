@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AC Dental | Contacto</title>
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="jcb-body">
+
+<header class="jcb-header">
+   
+    <!-- Logo interactivo con posicionamiento z-index corregido -->
+    <div class="logo jcb-logo">
+        <a href="index.html" style="display: inline-block; cursor: pointer; position: relative; z-index: 10;">
+            <img src="images/logo horizontal.png" alt="Logo AC Dental">
+        </a>
+    </div>
+    
+    <nav class="jcb-nav">
+        <ul>
+            <li><a href="index.html" class="jcb-nav-link">Inicio</a></li>
+            <li><a href="nosotros.html" class="jcb-nav-link">Nosotros</a></li>
+            <li><a href="servicios.html" class="jcb-nav-link">Servicios</a></li>
+            <li><a href="especialistas.html" class="jcb-nav-link">Especialistas</a></li>
+            <li><a href="galeria.html" class="jcb-nav-link">Galería</a></li>
+            <li><a href="contacto.html" class="jcb-nav-link active">Contacto</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+<section class="container my-5 jcb-accordion-section">
+
+    <div class="text-center my-4 pt-5">
+
+        <h2 class="fw-bold jcb-anim-title">Contáctanos</h2>
+
+        <p class="lead text-muted">
+            ¿Tienes alguna consulta o deseas agendar una cita? Estamos listos para atenderte.
+        </p>
+
+    </div>
+    <!-- Sistema de grilla de Bootstrap para dividir la pantalla en dos columnas -->
+    <div class="row g-4 justify-content-center">
+
+        <!-- Columna Izquierda: Formulario de Cita / Contacto -->
+        <div class="col-md-6 col-lg-6">
+            <form action="#" method="POST" class="shadow p-4 rounded-4 bg-white border-0">
+                <h4 class="mb-4 fw-bold text-dark">Envíanos un mensaje</h4>
+                
+                <div class="mb-3">
+                    <label for="nombre" class="form-label fw-medium">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="correo" class="form-label fw-medium">Correo electrónico</label>
+                    <!-- Corrección del error de comilla de cierre de tu código -->
+                    <input type="email" class="form-control" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="telefono" class="form-label fw-medium">Teléfono / Celular</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="987654321">
+                </div>
+
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label fw-medium">¿En qué tratamiento estás interesado?</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
+                </div>
+
+                <button type="submit" class="w-100 text-white fw-bold py-2 border-0 jcb-search-btn" style="background-color: #4F8F80; border-radius: 8px;">
+                    Enviar Solicitud
+                </button>
+            </form>
+        </div>
+
+        <!-- Columna Derecha: Información de Utilidad e Incrustación Externa -->
+        <div class="col-md-6 col-lg-5 offset-lg-1 d-flex flex-column justify-content-between">
+            
+            <div class="shadow p-4 rounded-4 bg-white mb-4 border-0">
+                <h4 class="mb-3 fw-bold text-dark">Información de la Clínica</h4>
+                
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-3">
+                        <strong>📍 Dirección:</strong><br>
+                        <span class="text-muted">Av. Próceres de la Independencia, San Juan de Lurigancho, Lima.</span>
+                    </li>
+                    <li class="mb-3">
+                        <strong>📅 Horario de Atención:</strong><br>
+                        <span class="text-muted">Lunes a Sábado: 9:00 AM - 8:00 PM</span>
+                    </li>
+                    <li class="mb-0">
+                        <strong>📞 Central Telefónica / WhatsApp:</strong><br>
+                        <span class="text-muted">+51 999 888 777</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Mapa Simulado Responsivo con clases de Bootstrap (Aumenta la utilidad de la página) -->
+            <div class="shadow p-3 rounded-4 bg-white border-0 flex-grow-1 d-flex flex-column">
+                <h5 class="fw-bold text-dark mb-2">Nuestra Ubicación</h5>
+                <div class="ratio ratio-16x9 rounded-3 overflow-hidden bg-light border flex-grow-1">
+                    <!-- Mapa embebido configurado para que cargue fluidamente -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15610.1654877395!2d-77.0125!3d-11.9833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5f2479e0a77%3A0x6b82a7f5a8c9039!2sSan%20Juan%20de%20Lurigancho!5e0!3m2!1ses-419!2spe!4v1710000000000!5m2!1ses-419!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-3 mt-5 jcb-footer">
+    <div class="container text-center text-md-start">
+        <div class="row align-items-center">
+            <div class="col-md-4 mb-2 mb-md-0">
+                <h5 class="fw-bold mb-1">AC Dental</h5>
+                <small>Tu sonrisa es nuestra prioridad</small>
+            </div>
+            <div class="col-md-4 mb-2 mb-md-0 text-center">
+                <small>contacto@acdental.pe | SJL - Lima</small>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" class="jcb-social-link"><img src="images/tiktok.png" width="28" alt="TikTok"></a>
+                    <a href="#" class="jcb-social-link"><img src="images/whatsapp.png" width="28" alt="WhatsApp"></a>
+                    <a href="#" class="jcb-social-link"><img src="images/facebook.png" width="28" alt="Facebook"></a>
+                    <a href="#" class="jcb-social-link"><img src="images/instagram.png" width="28" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <hr class="border-secondary my-2">
+        <div class="text-center">
+            <small>© 2026 AC Dental. Todos los derechos reservados.</small>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
