@@ -1,0 +1,246 @@
+body, .jcb-body {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+section, .jcb-accordion-section {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+article {
+  border: solid 1px #dddddd;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* estructura principal y menu */
+
+.jcb-header-nav {
+  width: 92%;
+  max-width: 1350px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+  padding: 10px 0;
+}
+
+.jcb-logo img {
+  height: 60px; 
+  width: auto;
+  display: block;
+}
+
+.jcb-nav-link {
+  text-decoration: none;
+  color: #444444 !important;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  width: 100%; 
+}
+
+@media (min-width: 992px) {
+  .jcb-nav-link {
+    width: auto; 
+  }
+}
+
+.jcb-nav-link:hover {
+  background-color: #f0f7f5;
+  color: #509080 !important;
+}
+
+.jcb-nav-link.active {
+  background-color: #509080;
+  color: white !important;
+}
+
+/* botones e imagenes */
+
+.jcb-hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.jcb-search-btn {
+  background-color: #509080;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.jcb-search-btn:hover {
+  background-color: #3f7366;
+}
+
+/* efectos y animaciones */
+
+@keyframes jcb-fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.jcb-anim-title {
+  animation: jcb-fade-down 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.jcb-card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jcb-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(80, 144, 128, 0.15) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #509080 !important;
+  box-shadow: 0 0 0 4px rgba(80, 144, 128, 0.15) !important;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* tablas y formularios */
+
+table {
+  width: 100%;
+  border: solid 1px #cccccc;
+}
+
+td {
+  border: solid 1px #cccccc;
+  padding: 10px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: solid 1px #cccccc;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+}
+
+/* pie de pagina */
+
+footer, .jcb-footer {
+  background-color: #509080;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+}
+
+.jcb-social-link img {
+  transition: transform 0.2s ease;
+}
+
+.jcb-social-link img:hover {
+  transform: translateY(-3px);
+}
+
+/* boton flotante de reclamaciones */
+
+.jcb-btn-reclamaciones {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #509080;
+  color: white !important;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.jcb-btn-reclamaciones:hover {
+  background-color: #3f7366;
+  transform: translateY(-3px);
+}
+
+/* pantalla de carga preloader */
+
+.jcb-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* mitad izquierda de la cortina */
+.jcb-preloader-izq {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #509080;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* mitad derecha de la cortina */
+.jcb-preloader-der {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #509080;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* logo del centro */
+.jcb-preloader-logo {
+  position: relative;
+  z-index: 10001;
+  transition: opacity 0.3s ease;
+}
+
+.jcb-preloader-logo img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* clase que activa javascript para abrir en dos */
+.jcb-preloader-oculto .jcb-preloader-izq {
+  transform: translateX(-100%);
+}
+
+.jcb-preloader-oculto .jcb-preloader-der {
+  transform: translateX(100%);
+}
