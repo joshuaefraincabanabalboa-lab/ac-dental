@@ -1,21 +1,16 @@
-/* ==========================================================================
-   ESTILOS GENERALES Y CONFIGURACIÓN BASE
-   ========================================================================== */
 body, .jcb-body {
   font-family: "Ubuntu", sans-serif;
   margin: 0;
-  background-color: #ffffff; /* <--- Cambiado a Blanco puro */
+  background-color: #ffffff;
   color: #333333;
 }
 
-/* SECCIONES GENERALES */
 section, .jcb-accordion-section {
   width: 90%;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* ARTÍCULOS */
 article {
   border: solid 1px #dddddd;
   border-radius: 15px;
@@ -23,197 +18,113 @@ article {
   margin-bottom: 20px;
 }
 
-/* ==========================================================================
-   HEADER Y NAVEGACIÓN (Clases originales + jcb)
-   ========================================================================== */
-header, .jcb-header {
-    width: 92%;
-    max-width: 1350px;
-    margin: 30px auto;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,.08);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 15px;
-}
+/* estructura principal y menu */
 
-nav, .jcb-nav {
-    margin-right: 40px;
-    margin-left: 40px;
+header, .jcb-header {
+  width: 92%;
+  max-width: 1350px;
+  margin: 30px auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 15px;
 }
 
 .logo img, .jcb-logo img {
-    height: 75px; 
-    width: auto;  
+  height: 75px;
+  width: auto;
+  display: block;
 }
-nav ul {
-    display: flex;
-    gap: 45px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+
+nav ul, .jcb-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
 }
 
 nav a, .jcb-nav-link {
-    text-decoration: none;
-    color: #222;
-    font-size: 17px;
-    font-weight: 400;
-    transition: .25s; /* Animación 1: Transición suave en enlaces */
+  text-decoration: none;
+  color: #444444;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 nav a:hover, .jcb-nav-link:hover {
-    color: #A7D8D0;
+  background-color: #f0f7f5;
+  color: #509080;
 }
 
-/* ==========================================================================
-   BARRA DE BÚSQUEDA (Ordenada y unificada)
-   ========================================================================== */
-.search-container, .jcb-search-container {
-    width: 100%;
-    max-width: 700px;
-    height: 42px;
-    margin: 35px auto;
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 25px;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+.jcb-nav-link.active {
+  background-color: #509080;
+  color: white !important;
 }
 
-.search-input, .jcb-search-input {
-    flex: 1;
-    border: none;
-    outline: none;
-    padding: 0 18px;
-    font-size: 15px;
-    background: transparent;
-    margin: 0;
-}
+/* botones e imagenes */
 
-.search-btn, .jcb-search-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    background: #4F8F80;
-    color: white;
-    border: none;
-    padding: 0 30px;
-    margin: 0;
-    border-radius: 0;
-    cursor: pointer;
-    transition: .25s;
-}
-
-.search-btn:hover, .jcb-search-btn:hover {
-    filter: brightness(.92);
-}
-
-/* ==========================================================================
-   HERO / COMPONENTES PRINCIPALES
-   ========================================================================== */
-.hero, .jcb-hero {
-  text-align: center;
-  padding: 60px;
-}
-
-/* Animación 2: Efecto hover sutil en la imagen principal del Hero */
 .jcb-hero-img {
-  transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
 }
 
-.jcb-hero-img:hover {
-  transform: scale(1.02);
+.jcb-search-btn {
+  background-color: #509080;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-/* ==========================================================================
-   CARRUSEL (Bootstrap nativo adaptado)
-   ========================================================================== */
-.carousel {
-    max-width: 1000px;
-    margin: 40px auto;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+.jcb-search-btn:hover {
+  background-color: #3f7366;
 }
 
-.carousel-item {
-    transition: transform .6s ease-in-out;
+/* efectos y animaciones */
+
+@keyframes jcb-fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.carousel-item img {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
+.jcb-anim-title {
+  animation: jcb-fade-down 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.carousel-caption, .jcb-caption {
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    background: transparent;
-    text-align: center;
+.jcb-card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.carousel-caption h3 {
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 8px rgba(0,0,0,.8);
+.jcb-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(80, 144, 128, 0.15) !important;
 }
 
-.carousel-caption p {
-    color: white;
-    font-size: 1.1rem;
-    text-shadow: 2px 2px 8px rgba(0,0,0,.8);
+input:focus, textarea:focus, select:focus {
+  border-color: #509080 !important;
+  box-shadow: 0 0 0 4px rgba(80, 144, 128, 0.15) !important;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.carousel-control-prev, .carousel-control-next {
-    width: 10%;
-}
+/* tablas y formularios */
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    background-size: 70%;
-}
-
-.carousel-indicators button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-
-/* ==========================================================================
-   ACCORDION (Bootstrap Correcciones)
-   ========================================================================== */
-.accordion {
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.jcb-accordion-header-title {
-  background-color: #ffffff;
-}
-
-.accordion-item {
-  border-radius: 16px !important;
-  overflow: hidden;
-  margin-bottom: 10px;
-  border: 1px solid rgba(0,0,0,0.1);
-}
-
-/* Animación 3: Cambio suave de color de fondo al enfocar un botón del acordeón */
-.jcb-accordion-btn {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* ==========================================================================
-   TABLAS, FORMULARIOS Y ELEMENTOS COMUNES
-   ========================================================================== */
 table {
   width: 100%;
   border: solid 1px #cccccc;
@@ -240,7 +151,8 @@ button {
   border-radius: 8px;
 }
 
-/* FOOTER */
+/* pie de pagina */
+
 footer, .jcb-footer {
   background-color: #509080;
   text-align: center;
@@ -248,7 +160,6 @@ footer, .jcb-footer {
   margin-top: 40px;
 }
 
-/* Animación 4: Efecto sutil al pasar el mouse sobre las redes sociales */
 .jcb-social-link img {
   transition: transform 0.2s ease;
 }
@@ -257,22 +168,83 @@ footer, .jcb-footer {
   transform: translateY(-3px);
 }
 
-/* ==========================================================================
-   REGLAS KEYFRAMES (Animaciones automáticas de carga)
-   ========================================================================== */
+/* boton flotante de reclamaciones */
 
-/* Animación 5: Entrada con deslizamiento y opacidad para el título principal */
-.jcb-anim-title {
-  animation: jcbEntradaTitulo 1s ease-out forwards;
+.jcb-btn-reclamaciones {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #509080;
+  color: white !important;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-@keyframes jcbEntradaTitulo {
-  0% {
-    opacity: 0;
-    transform: translateY(-15px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.jcb-btn-reclamaciones:hover {
+  background-color: #3f7366;
+  transform: translateY(-3px);
+}
+
+/* pantalla de carga preloader */
+
+.jcb-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* mitad izquierda de la cortina */
+.jcb-preloader-izq {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #509080;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* mitad derecha de la cortina */
+.jcb-preloader-der {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #509080;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* logo del centro */
+.jcb-preloader-logo {
+  position: relative;
+  z-index: 10001;
+  transition: opacity 0.3s ease;
+}
+
+.jcb-preloader-logo img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* clase que activa javascript para abrir en dos */
+.jcb-preloader-oculto .jcb-preloader-izq {
+  transform: translateX(-100%);
+}
+
+.jcb-preloader-oculto .jcb-preloader-der {
+  transform: translateX(100%);
 }
